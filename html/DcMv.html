@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Hero - Superhéroes</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dc.css">
+    <link rel="stylesheet" href="../css/marvel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="dc-theme" id="dcpin"> 
+        <header>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Arena Hero Logo" id="logo-pequeño">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#dcpin" class="active">DC</a></li>
+                    <li><a href="#marvelpin">MARVEL</a></li>
+                    <li><a href="arena.html">Arena</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="titulo-seccion">Superhéroes DC</h1>
+            <div class="contenedor-tarjetas" id="dc-heroes">
+                <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+            </div>
+        </main>
+    </section>
+    
+    <!-- SEPARACION -->
+    <section class="marvel-theme" id="marvelpin">
+        <main>
+            <h1 class="titulo-seccion titulo-marvel">Superhéroes Marvel</h1>
+            <div class="contenedor-tarjetas" id="marvel-heroes">
+                <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+            </div>
+        </main>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Arena Hero - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -35,7 +35,8 @@ function cargarDatos() {
       id: 1,
       nombre: "Batman",
       nombreClave: "Bruce Wayne",
-      descripcion: "El Caballero Oscuro de Gotham City, un vigilante que lucha contra el crimen utilizando su intelecto, habilidades físicas y tecnología avanzada.",
+      descripcion:
+        "El Caballero Oscuro de Gotham City, un vigilante que lucha contra el crimen utilizando su intelecto, habilidades físicas y tecnología avanzada.",
       imagen: "images/batman.jpg",
       fuerza: 7,
       ataque: 8,
@@ -43,7 +44,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Armadura", "Sigilo", "Knightmare", "Táctico"],
       poderes: ["Maestro detective", "Artes marciales", "Tecnología avanzada", "Estratega"],
-      historia: "Tras presenciar el asesinato de sus padres cuando era niño, Bruce Wayne juró venganza contra los criminales, entrenando física y mentalmente para combatir el mal en Gotham City.",
+      historia:
+        "Tras presenciar el asesinato de sus padres cuando era niño, Bruce Wayne juró venganza contra los criminales, entrenando física y mentalmente para combatir el mal en Gotham City.",
       ataques: [
         { nombre: "Batarang", daño: 15, tipo: "Distancia", animacion: "batarang" },
         { nombre: "Puñetazo", daño: 20, tipo: "Físico", animacion: "puñetazo" },
@@ -55,7 +57,8 @@ function cargarDatos() {
       id: 2,
       nombre: "Superman",
       nombreClave: "Clark Kent",
-      descripcion: "El Hombre de Acero, un alienígena de Krypton con poderes sobrehumanos que protege la Tierra como su mayor héroe.",
+      descripcion:
+        "El Hombre de Acero, un alienígena de Krypton con poderes sobrehumanos que protege la Tierra como su mayor héroe.",
       imagen: "images/superman.jpg",
       fuerza: 10,
       ataque: 9,
@@ -63,7 +66,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Negro", "Recuperación", "Kryptoniano", "Elite"],
       poderes: ["Super fuerza", "Vuelo", "Visión de calor", "Aliento helado", "Invulnerabilidad"],
-      historia: "Nacido en el planeta Krypton como Kal-El, fue enviado a la Tierra por sus padres antes de la destrucción de su mundo. Criado como Clark Kent, usa sus poderes para proteger a la humanidad.",
+      historia:
+        "Nacido en el planeta Krypton como Kal-El, fue enviado a la Tierra por sus padres antes de la destrucción de su mundo. Criado como Clark Kent, usa sus poderes para proteger a la humanidad.",
       ataques: [
         { nombre: "Visión de calor", daño: 25, tipo: "Energía", animacion: "calor" },
         { nombre: "Super fuerza", daño: 30, tipo: "Físico", animacion: "fuerza" },
@@ -75,7 +79,8 @@ function cargarDatos() {
       id: 3,
       nombre: "Wonder Woman",
       nombreClave: "Diana Prince",
-      descripcion: "Princesa Amazona y guerrera, bendecida por los dioses con habilidades sobrehumanas y destreza en combate.",
+      descripcion:
+        "Princesa Amazona y guerrera, bendecida por los dioses con habilidades sobrehumanas y destreza en combate.",
       imagen: "images/wonder-woman.jpg",
       fuerza: 9,
       ataque: 8,
@@ -83,7 +88,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Armadura", "Amazona", "Dorado", "Casual"],
       poderes: ["Fuerza sobrehumana", "Velocidad", "Vuelo", "Brazaletes deflectores", "Lazo de la verdad"],
-      historia: "Diana es hija de Hipólita, reina de las Amazonas, y Zeus. Creció en Themyscira antes de partir al mundo de los hombres para combatir el mal y promover la paz.",
+      historia:
+        "Diana es hija de Hipólita, reina de las Amazonas, y Zeus. Creció en Themyscira antes de partir al mundo de los hombres para combatir el mal y promover la paz.",
       ataques: [
         { nombre: "Lazo de la verdad", daño: 20, tipo: "Mágico", animacion: "lazo" },
         { nombre: "Brazaletes", daño: 15, tipo: "Defensa", animacion: "brazaletes" },
@@ -95,7 +101,8 @@ function cargarDatos() {
       id: 4,
       nombre: "Flash",
       nombreClave: "Barry Allen",
-      descripcion: "El hombre más rápido del mundo, capaz de moverse a velocidades sobrehumanas y manipular la Speed Force.",
+      descripcion:
+        "El hombre más rápido del mundo, capaz de moverse a velocidades sobrehumanas y manipular la Speed Force.",
       imagen: "images/flash.jpg",
       fuerza: 6,
       ataque: 7,
@@ -103,7 +110,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Futuro", "Velocidad", "Experimental", "Oscuro"],
       poderes: ["Super velocidad", "Viaje en el tiempo", "Faseado molecular", "Lanzamiento de rayos"],
-      historia: "Barry Allen era un científico forense que adquirió super velocidad tras ser alcanzado por un rayo y bañado en productos químicos. Usa sus poderes para proteger Central City.",
+      historia:
+        "Barry Allen era un científico forense que adquirió super velocidad tras ser alcanzado por un rayo y bañado en productos químicos. Usa sus poderes para proteger Central City.",
       ataques: [
         { nombre: "Puño supersónico", daño: 20, tipo: "Físico", animacion: "puño" },
         { nombre: "Tornado", daño: 15, tipo: "Área", animacion: "tornado" },
@@ -123,7 +131,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Rey", "Gladiador", "Atlante", "Casual"],
       poderes: ["Respiración acuática", "Comunicación con vida marina", "Fuerza sobrehumana", "Control del agua"],
-      historia: "Hijo de un farero humano y una reina atlante, Arthur Curry descubrió sus orígenes y poderes, eventualmente reclamando su lugar como rey de la Atlántida y protector de los océanos.",
+      historia:
+        "Hijo de un farero humano y una reina atlante, Arthur Curry descubrió sus orígenes y poderes, eventualmente reclamando su lugar como rey de la Atlántida y protector de los océanos.",
       ataques: [
         { nombre: "Tridente", daño: 25, tipo: "Físico", animacion: "tridente" },
         { nombre: "Control marino", daño: 20, tipo: "Agua", animacion: "agua" },
@@ -135,7 +144,8 @@ function cargarDatos() {
       id: 6,
       nombre: "Green Lantern",
       nombreClave: "Hal Jordan",
-      descripcion: "Miembro del Cuerpo de Linternas Verdes, utiliza un anillo de poder alimentado por la fuerza de voluntad.",
+      descripcion:
+        "Miembro del Cuerpo de Linternas Verdes, utiliza un anillo de poder alimentado por la fuerza de voluntad.",
       imagen: "images/green-lantern.jpg",
       fuerza: 7,
       ataque: 8,
@@ -143,7 +153,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Espectro", "Parallax", "Rebirth", "Piloto"],
       poderes: ["Anillo de poder", "Vuelo", "Creación de constructos", "Escudo de energía"],
-      historia: "Hal Jordan era un piloto de pruebas que recibió un anillo de poder de un Linterna Verde moribundo. Se convirtió en el protector del Sector 2814 como miembro del Cuerpo de Linternas Verdes.",
+      historia:
+        "Hal Jordan era un piloto de pruebas que recibió un anillo de poder de un Linterna Verde moribundo. Se convirtió en el protector del Sector 2814 como miembro del Cuerpo de Linternas Verdes.",
       ataques: [
         { nombre: "Puño de energía", daño: 20, tipo: "Energía", animacion: "puño-energia" },
         { nombre: "Ametralladora", daño: 15, tipo: "Distancia", animacion: "ametralladora" },
@@ -158,7 +169,8 @@ function cargarDatos() {
       id: 1,
       nombre: "Iron Man",
       nombreClave: "Tony Stark",
-      descripcion: "Genio inventor y multimillonario que creó una armadura de alta tecnología para salvar su vida y combatir el mal.",
+      descripcion:
+        "Genio inventor y multimillonario que creó una armadura de alta tecnología para salvar su vida y combatir el mal.",
       imagen: "images/iron-man.jpg",
       fuerza: 8,
       ataque: 9,
@@ -166,7 +178,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Mark III", "Hulkbuster", "Nanotecnología", "Bleeding Edge", "Extremis"],
       poderes: ["Inteligencia superior", "Armadura tecnológica", "Vuelo", "Armas de energía"],
-      historia: "Tony Stark, un genio inventor y CEO de Stark Industries, fue secuestrado y obligado a construir un arma. En su lugar, creó una armadura para escapar y se convirtió en Iron Man para proteger al mundo.",
+      historia:
+        "Tony Stark, un genio inventor y CEO de Stark Industries, fue secuestrado y obligado a construir un arma. En su lugar, creó una armadura para escapar y se convirtió en Iron Man para proteger al mundo.",
       ataques: [
         { nombre: "Repulsor", daño: 20, tipo: "Energía", animacion: "repulsor" },
         { nombre: "Misiles", daño: 25, tipo: "Explosivo", animacion: "misiles" },
@@ -186,7 +199,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Asgardiano", "Gladiador", "Rey", "Unworthy", "Ultimate"],
       poderes: ["Fuerza sobrehumana", "Control del rayo", "Vuelo", "Longevidad", "Resistencia"],
-      historia: "Thor es el hijo de Odín y príncipe de Asgard. Fue enviado a la Tierra para aprender humildad y se convirtió en uno de sus mayores defensores, usando su martillo Mjolnir para controlar el trueno.",
+      historia:
+        "Thor es el hijo de Odín y príncipe de Asgard. Fue enviado a la Tierra para aprender humildad y se convirtió en uno de sus mayores defensores, usando su martillo Mjolnir para controlar el trueno.",
       ataques: [
         { nombre: "Mjolnir", daño: 25, tipo: "Contundente", animacion: "martillo" },
         { nombre: "Relámpago", daño: 30, tipo: "Eléctrico", animacion: "rayo" },
@@ -198,7 +212,8 @@ function cargarDatos() {
       id: 3,
       nombre: "Spider-Man",
       nombreClave: "Peter Parker",
-      descripcion: "Joven héroe con habilidades arácnidas que equilibra su vida de superhéroe con sus responsabilidades personales.",
+      descripcion:
+        "Joven héroe con habilidades arácnidas que equilibra su vida de superhéroe con sus responsabilidades personales.",
       imagen: "images/spider-man.jpg",
       fuerza: 7,
       ataque: 8,
@@ -206,7 +221,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Simbionte", "Iron Spider", "Stealth", "Future Foundation"],
       poderes: ["Fuerza proporcional", "Agilidad sobrehumana", "Sentido arácnido", "Trepamuros", "Lanzatelarañas"],
-      historia: "Peter Parker adquirió poderes arácnidos tras ser mordido por una araña radiactiva. Después de la muerte de su tío Ben, aprendió que un gran poder conlleva una gran responsabilidad.",
+      historia:
+        "Peter Parker adquirió poderes arácnidos tras ser mordido por una araña radiactiva. Después de la muerte de su tío Ben, aprendió que un gran poder conlleva una gran responsabilidad.",
       ataques: [
         { nombre: "Telaraña", daño: 15, tipo: "Restricción", animacion: "telaraña" },
         { nombre: "Patada", daño: 20, tipo: "Físico", animacion: "patada" },
@@ -226,7 +242,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Gladiador", "Profesor", "Joe Fixit", "Worldbreaker"],
       poderes: ["Fuerza ilimitada", "Regeneración", "Resistencia", "Saltos enormes", "Inmunidad a toxinas"],
-      historia: "El Dr. Bruce Banner fue expuesto a radiación gamma durante un experimento fallido, lo que le dio la capacidad de transformarse en Hulk cuando se enfada o está en peligro.",
+      historia:
+        "El Dr. Bruce Banner fue expuesto a radiación gamma durante un experimento fallido, lo que le dio la capacidad de transformarse en Hulk cuando se enfada o está en peligro.",
       ataques: [
         { nombre: "Aplastamiento", daño: 35, tipo: "Físico", animacion: "aplastamiento" },
         { nombre: "Salto sísmico", daño: 25, tipo: "Área", animacion: "salto" },
@@ -238,7 +255,8 @@ function cargarDatos() {
       id: 5,
       nombre: "Captain America",
       nombreClave: "Steve Rogers",
-      descripcion: "El primer vengador, un super soldado con fuerza, agilidad y resistencia mejoradas que porta un escudo de vibranium.",
+      descripcion:
+        "El primer vengador, un super soldado con fuerza, agilidad y resistencia mejoradas que porta un escudo de vibranium.",
       imagen: "images/captain-america.jpg",
       fuerza: 7,
       ataque: 8,
@@ -246,7 +264,8 @@ function cargarDatos() {
       vida: 100,
       trajes: ["Clásico", "Stealth", "Vengador", "Nómada", "Comandante"],
       poderes: ["Fuerza mejorada", "Agilidad sobrehumana", "Resistencia", "Curación acelerada", "Maestro táctico"],
-      historia: "Steve Rogers era un joven débil que se ofreció para un experimento gubernamental durante la Segunda Guerra Mundial. El suero del super soldado lo transformó en Captain America.",
+      historia:
+        "Steve Rogers era un joven débil que se ofreció para un experimento gubernamental durante la Segunda Guerra Mundial. El suero del super soldado lo transformó en Captain America.",
       ataques: [
         { nombre: "Escudo", daño: 20, tipo: "Físico", animacion: "escudo" },
         { nombre: "Combate cuerpo a cuerpo", daño: 25, tipo: "Físico", animacion: "combate" },
@@ -265,8 +284,15 @@ function cargarDatos() {
       debilidad: "Pasado",
       vida: 100,
       trajes: ["Clásico", "Stealth", "Blanco", "Táctico", "Vengador"],
-      poderes: ["Maestría en artes marciales", "Experta en armas", "Espionaje", "Agilidad mejorada", "Resistencia a toxinas"],
-      historia: "Entrenada desde joven en la Habitación Roja, Natasha Romanoff fue una de las mejores espías soviéticas antes de desertar y unirse a S.H.I.E.L.D. y posteriormente a los Vengadores.",
+      poderes: [
+        "Maestría en artes marciales",
+        "Experta en armas",
+        "Espionaje",
+        "Agilidad mejorada",
+        "Resistencia a toxinas",
+      ],
+      historia:
+        "Entrenada desde joven en la Habitación Roja, Natasha Romanoff fue una de las mejores espías soviéticas antes de desertar y unirse a S.H.I.E.L.D. y posteriormente a los Vengadores.",
       ataques: [
         { nombre: "Mordida de viuda", daño: 20, tipo: "Eléctrico", animacion: "mordida" },
         { nombre: "Patada giratoria", daño: 15, tipo: "Físico", animacion: "patada-giratoria" },
@@ -276,14 +302,15 @@ function cargarDatos() {
     },
   ]
 
-  // Si estamos en la página DC, cargar tarjetas DC
-  if (window.location.pathname.includes("dc.html")) {
-    cargarTarjetasPersonajes("dc-heroes", personajesDC)
-  }
-
-  // Si estamos en la página Marvel, cargar tarjetas Marvel
-  if (window.location.pathname.includes("marvel.html")) {
-    cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
+  // Si estamos en la página DcMv.html, cargar tarjetas DC y Marvel
+  if (window.location.pathname.includes("DcMv.html")) {
+    // Verificar si hay un hash en la URL para determinar qué sección mostrar
+    if (window.location.hash === "#marvelpin") {
+      cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
+    } else {
+      // Por defecto o si es #dcpin, cargar DC
+      cargarTarjetasPersonajes("dc-heroes", personajesDC)
+    }
   }
 }
 
@@ -338,6 +365,18 @@ function configurarEventosPagina() {
       window.location.href = `${rutaBase}arena.html`
     })
   }
+
+  // Si estamos en la página DcMv.html, configurar eventos para cargar las tarjetas según el hash
+  if (window.location.pathname.includes("DcMv.html")) {
+    // Escuchar cambios en el hash de la URL
+    window.addEventListener("hashchange", () => {
+      if (window.location.hash === "#marvelpin") {
+        cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
+      } else if (window.location.hash === "#dcpin") {
+        cargarTarjetasPersonajes("dc-heroes", personajesDC)
+      }
+    })
+  }
 }
 
 // Función para cargar tarjetas de personajes (DC o Marvel)
@@ -346,7 +385,7 @@ function cargarTarjetasPersonajes(contenedorId, personajes) {
   if (!contenedor) return
 
   contenedor.innerHTML = ""
-  
+
   // Determinar la ruta base para las imágenes
   const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
 
@@ -376,13 +415,13 @@ function cargarTarjetasPersonajes(contenedorId, personajes) {
                     <div class="seccion-info">
                         <h4>Poderes:</h4>
                         <ul>
-                            ${personaje.poderes.map(poder => `<li>${poder}</li>`).join('')}
+                            ${personaje.poderes.map((poder) => `<li>${poder}</li>`).join("")}
                         </ul>
                     </div>
                     <div class="seccion-info">
                         <h4>Trajes:</h4>
                         <ul>
-                            ${personaje.trajes.map(traje => `<li>${traje}</li>`).join('')}
+                            ${personaje.trajes.map((traje) => `<li>${traje}</li>`).join("")}
                         </ul>
                     </div>
                     <div class="seccion-info">
@@ -416,7 +455,7 @@ function cargarTarjetasPersonajes(contenedorId, personajes) {
 function seleccionarModo(modo) {
   modoJuego = modo
   localStorage.setItem("modoJuego", modo)
-  
+
   // Determinar la ruta correcta según la ubicación actual
   const rutaBase = window.location.pathname.includes("/html/") ? "" : "html/"
   window.location.href = `${rutaBase}personajes.html`
@@ -474,7 +513,7 @@ function mostrarPersonajesUniverso(universo) {
 // Función para seleccionar personaje
 function seleccionarPersonaje(personaje) {
   const cards = document.querySelectorAll(".personaje-card")
-  
+
   // Determinar la ruta base para las imágenes
   const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
 
@@ -492,9 +531,8 @@ function seleccionarPersonaje(personaje) {
     const divPersonaje1 = document.getElementById("personaje1")
     // Corregir la ruta de la imagen
     const rutaImagen = `${rutaBase}${personaje.imagen || "images/placeholder.jpg"}`
-    
-    divPersonaje1.querySelector(".imagen-personaje").innerHTML =
-      `<img src="${rutaImagen}" alt="${personaje.nombre}">`
+
+    divPersonaje1.querySelector(".imagen-personaje").innerHTML = `<img src="${rutaImagen}" alt="${personaje.nombre}">`
     divPersonaje1.querySelector(".info-personaje").innerHTML = `
             <h3>${personaje.nombre}</h3>
             <p><strong>Fuerza:</strong> <span class="stat-valor">${personaje.fuerza}</span></p>
@@ -516,9 +554,8 @@ function seleccionarPersonaje(personaje) {
     const divPersonaje2 = document.getElementById("personaje2")
     // Corregir la ruta de la imagen
     const rutaImagen = `${rutaBase}${personaje.imagen || "images/placeholder.jpg"}`
-    
-    divPersonaje2.querySelector(".imagen-personaje").innerHTML =
-      `<img src="${rutaImagen}" alt="${personaje.nombre}">`
+
+    divPersonaje2.querySelector(".imagen-personaje").innerHTML = `<img src="${rutaImagen}" alt="${personaje.nombre}">`
     divPersonaje2.querySelector(".info-personaje").innerHTML = `
             <h3>${personaje.nombre}</h3>
             <p><strong>Fuerza:</strong> <span class="stat-valor">${personaje.fuerza}</span></p>
@@ -582,7 +619,11 @@ function cargarPersonajesCombate() {
   // Guardar vida inicial
   vidaInicial1 = personaje1.vida
   vidaInicial2 = personaje2.vida
-  
+
+  // Actualizar las referencias globales a los personajes seleccionados
+  personajeSeleccionado1 = personaje1
+  personajeSeleccionado2 = personaje2
+
   // Determinar la ruta base para las imágenes
   const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
 
@@ -590,15 +631,15 @@ function cargarPersonajesCombate() {
   const divIzquierda = document.getElementById("personaje-izquierda")
   // Corregir la ruta de la imagen
   const rutaImagen1 = `${rutaBase}${personaje1.imagen || "images/placeholder.jpg"}`
-  
-  divIzquierda.querySelector(".imagen-combate").innerHTML =
-    `<img src="${rutaImagen1}" alt="${personaje1.nombre}">`
+
+  divIzquierda.querySelector(".imagen-combate").innerHTML = `<img src="${rutaImagen1}" alt="${personaje1.nombre}">`
   divIzquierda.querySelector(".nombre-personaje").textContent = personaje1.nombre
   divIzquierda.querySelector(".vida-actual").style.width = "100%"
   divIzquierda.querySelector(".vida-texto").textContent = `${personaje1.vida}/${vidaInicial1}`
 
   // Cargar ataques del personaje 1
   const listaAtaquesIzquierda = divIzquierda.querySelector(".lista-ataques")
+  listaAtaquesIzquierda.innerHTML = "" // Limpiar ataques existentes
   personaje1.ataques.forEach((ataque) => {
     const botonAtaque = document.createElement("button")
     botonAtaque.className = ataque.tipo === "Crítico" ? "ataque-btn tipo-especial" : "ataque-btn"
@@ -619,15 +660,15 @@ function cargarPersonajesCombate() {
   const divDerecha = document.getElementById("personaje-derecha")
   // Corregir la ruta de la imagen
   const rutaImagen2 = `${rutaBase}${personaje2.imagen || "images/placeholder.jpg"}`
-  
-  divDerecha.querySelector(".imagen-combate").innerHTML =
-    `<img src="${rutaImagen2}" alt="${personaje2.nombre}">`
+
+  divDerecha.querySelector(".imagen-combate").innerHTML = `<img src="${rutaImagen2}" alt="${personaje2.nombre}">`
   divDerecha.querySelector(".nombre-personaje").textContent = personaje2.nombre
   divDerecha.querySelector(".vida-actual").style.width = "100%"
   divDerecha.querySelector(".vida-texto").textContent = `${personaje2.vida}/${vidaInicial2}`
 
   // Cargar ataques del personaje 2
   const listaAtaquesDerecha = divDerecha.querySelector(".lista-ataques")
+  listaAtaquesDerecha.innerHTML = "" // Limpiar ataques existentes
   personaje2.ataques.forEach((ataque) => {
     const botonAtaque = document.createElement("button")
     botonAtaque.className = ataque.tipo === "Crítico" ? "ataque-btn tipo-especial" : "ataque-btn"
@@ -747,16 +788,16 @@ function realizarAtaque(atacante, defensor, ataque) {
 function actualizarBotonesTurno() {
   const divIzquierda = document.getElementById("personaje-izquierda")
   const divDerecha = document.getElementById("personaje-derecha")
-  
+
   const modo = localStorage.getItem("modoJuego")
-  
+
   if (modo === "usuario-usuario") {
     // En modo usuario vs usuario, habilitar/deshabilitar según el turno
-    divIzquierda.querySelectorAll("button").forEach(btn => {
+    divIzquierda.querySelectorAll("button").forEach((btn) => {
       btn.disabled = !turnoJugador1
     })
-    
-    divDerecha.querySelectorAll("button").forEach(btn => {
+
+    divDerecha.querySelectorAll("button").forEach((btn) => {
       btn.disabled = turnoJugador1
     })
   }
@@ -773,12 +814,12 @@ function mostrarAnimacionAtaque(nombreAtaque, animacion, esCritico) {
 
   // Añadir clase para animación
   divAnimacion.className = "animacion-ataque activa"
-  
+
   // Añadir clase específica para la animación del ataque
   if (animacion) {
     divAnimacion.classList.add(`animacion-${animacion}`)
   }
-  
+
   if (esCritico) {
     divAnimacion.classList.add("critico")
   }
@@ -797,16 +838,15 @@ function actualizarVida(personaje, daño) {
   if (personaje.vida < 0) personaje.vida = 0
 
   // Actualizar barra de vida
-  const porcentajeVida = (personaje.vida / (personaje.id === personajeSeleccionado1.id ? vidaInicial1 : vidaInicial2)) * 100
+  const porcentajeVida =
+    (personaje.vida / (personaje.id === personajeSeleccionado1.id ? vidaInicial1 : vidaInicial2)) * 100
   const barraVida = document.querySelector(
     personaje.id === personajeSeleccionado1.id
       ? "#personaje-izquierda .vida-actual"
-      : "#personaje-derecha .vida-actual"
+      : "#personaje-derecha .vida-actual",
   )
   const textoVida = document.querySelector(
-    personaje.id === personajeSeleccionado1.id
-      ? "#personaje-izquierda .vida-texto"
-      : "#personaje-derecha .vida-texto"
+    personaje.id === personajeSeleccionado1.id ? "#personaje-izquierda .vida-texto" : "#personaje-derecha .vida-texto",
   )
 
   barraVida.style.width = porcentajeVida + "%"
@@ -863,7 +903,7 @@ function combateAutomatico() {
     realizarAtaque(personaje2, personaje1, ataqueAleatorio)
   }
 
-  // Continuar el combate automático después de un yiempo
+  // Continuar el combate automático después de un tiempo
   setTimeout(combateAutomatico, 2000)
 }
 
@@ -875,12 +915,12 @@ function finalizarCombate(ganador) {
 
   // Determinar la ruta base para las imágenes
   const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
-  
+
   // Mostrar ganador
   const divGanador = divResultado.querySelector(".imagen-ganador")
   // Corregir la ruta de la imagen
   const rutaImagen = `${rutaBase}${ganador.imagen || "images/placeholder.jpg"}`
-  
+
   divGanador.innerHTML = `<img src="${rutaImagen}" alt="${ganador.nombre}">`
   divResultado.querySelector(".nombre-ganador").textContent = ganador.nombre
 
@@ -893,6 +933,8 @@ function finalizarCombate(ganador) {
     btn.disabled = true
   })
 }
+
+// Función para mostrar mensaje
 function mostrarMensaje(mensaje) {
   const divMensaje = document.getElementById("mensaje-combate")
   divMensaje.textContent = mensaje
