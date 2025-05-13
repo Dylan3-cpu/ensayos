@@ -849,7 +849,7 @@ function combateAutomatico() {
   const personaje1 = JSON.parse(localStorage.getItem("personaje1"))
   const personaje2 = JSON.parse(localStorage.getItem("personaje2"))
 
-  // Si el combate ya terminó, no hacer nada
+  // Si el combate ya terminó no hacer nada
   if (personaje1.vida <= 0 || personaje2.vida <= 0) {
     return
   }
@@ -863,7 +863,7 @@ function combateAutomatico() {
     realizarAtaque(personaje2, personaje1, ataqueAleatorio)
   }
 
-  // Continuar el combate automático después de un breve retraso
+  // Continuar el combate automático después de un yiempo
   setTimeout(combateAutomatico, 2000)
 }
 
@@ -884,19 +884,15 @@ function finalizarCombate(ganador) {
   divGanador.innerHTML = `<img src="${rutaImagen}" alt="${ganador.nombre}">`
   divResultado.querySelector(".nombre-ganador").textContent = ganador.nombre
 
-  // Mostrar estadísticas
   document.getElementById("daño-realizado").textContent = estadisticasCombate.dañoRealizado
   document.getElementById("daño-recibido").textContent = estadisticasCombate.dañoRecibido
   document.getElementById("ataques-criticos").textContent = estadisticasCombate.ataquesCriticos
   document.getElementById("ataques-debiles").textContent = estadisticasCombate.ataquesDébiles
 
-  // Deshabilitar todos los botones de ataque
   document.querySelectorAll(".ataque-btn, .ataque-aleatorio").forEach((btn) => {
     btn.disabled = true
   })
 }
-
-// Función para mostrar mensaje
 function mostrarMensaje(mensaje) {
   const divMensaje = document.getElementById("mensaje-combate")
   divMensaje.textContent = mensaje
