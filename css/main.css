@@ -1,0 +1,256 @@
+/* css/main.css */
+/* Estilos generales compartidos por todas las páginas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Encabezado y navegación */
+header {
+  background-color: rgba(16, 16, 36, 0.95);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+  height: 60px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 1.5rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu a.active {
+  background: linear-gradient(135deg, #e63946 0%, #9d0208 100%);
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.5);
+}
+
+/* Contenido principal */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 150px);
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e63946;
+  font-family: "Bangers", cursive;
+  font-size: 3rem;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  letter-spacing: 2px;
+}
+
+/* Página de inicio */
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(26, 26, 46, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo-grande img {
+  max-width: 300px;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.texto-bienvenida {
+  max-width: 800px;
+}
+
+.texto-bienvenida h1 {
+  font-family: "Bangers", cursive;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #e63946;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.texto-bienvenida p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.boton-comenzar {
+  display: inline-block;
+  background: linear-gradient(135deg, #e63946 0%, #9d0208 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.5);
+}
+
+.boton-comenzar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.7);
+}
+
+/* Pie de página */
+footer {
+  background-color: rgba(16, 16, 36, 0.95);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .arena-combate {
+    flex-direction: column;
+  }
+
+  .personaje-combate {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .area-combate {
+    width: 100%;
+    margin: 1rem 0;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .menu {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin: 0.5rem;
+  }
+
+  .seleccion-personajes {
+    flex-direction: column;
+  }
+
+  .personaje-seleccionado {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .vs {
+    margin: 1rem 0;
+  }
+
+  .botones-final button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    padding: 1rem;
+  }
+
+  .titulo-seccion {
+    font-size: 2.5rem;
+  }
+
+  .texto-bienvenida h1 {
+    font-size: 2.5rem;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta {
+    height: 400px;
+  }
+
+  .seleccion-universo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn-universo {
+    width: 100%;
+  }
+
+  .botones-accion {
+    flex-direction: column;
+  }
+
+  .btn-accion {
+    width: 100%;
+  }
+}

@@ -1,0 +1,359 @@
+/* css/enfrentamiento.css */
+/* Estilos específicos para la página Enfrentamiento */
+.batalla-theme {
+  background-image: url('../images/batalla-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.arena-combate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.personaje-combate {
+  width: 300px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(40, 40, 80, 0.9) 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-combate {
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-combate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nombre-personaje {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "Bangers", cursive;
+  color: #e63946;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.barra-vida-container {
+  margin-bottom: 1rem;
+}
+
+.vida-texto {
+  text-align: right;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #e63946;
+  font-weight: bold;
+}
+
+.barra-vida {
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.vida-actual {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  width: 100%;
+  transition: width 0.5s, background 0.5s;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.ataques {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ataque-aleatorio {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #e63946 0%, #9d0208 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ataque-aleatorio:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.ataque-aleatorio:disabled {
+  background: linear-gradient(135deg, #888 0%, #555 100%);
+  cursor: not-allowed;
+}
+
+.lista-ataques {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.ataque-btn {
+  padding: 0.6rem 0.4rem;
+  background: linear-gradient(135deg, #333 0%, #222 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ataque-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #444 0%, #333 100%);
+}
+
+.ataque-btn:disabled {
+  background: linear-gradient(135deg, #555 0%, #444 100%);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.ataque-btn.tipo-especial {
+  background: linear-gradient(135deg, #9d0208 0%, #6a040f 100%);
+}
+
+.ataque-btn.tipo-especial:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e63946 0%, #9d0208 100%);
+}
+
+.area-combate {
+  flex: 1;
+  height: 300px;
+  margin: 0 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.animacion-ataque {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.mensaje-combate {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 20;
+  font-family: "Bangers", cursive;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.resultado-combate {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(40, 40, 80, 0.95) 100%);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+}
+
+.resultado-combate h2 {
+  font-family: "Bangers", cursive;
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.ganador {
+  margin-bottom: 2rem;
+}
+
+.ganador h3 {
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  color: gold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-ganador {
+  height: 200px;
+  width: 200px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid gold;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+}
+
+.imagen-ganador img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nombre-ganador {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e63946;
+  font-family: "Bangers", cursive;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.estadisticas {
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.estadisticas h3 {
+  font-family: "Bangers", cursive;
+  font-size: 1.8rem;
+  color: #e63946;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.estadisticas ul {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+}
+
+.estadisticas li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.estadisticas li span {
+  font-weight: bold;
+  color: #e63946;
+  margin-left: 0.5rem;
+}
+
+.botones-final {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.botones-final button {
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e63946 0%, #9d0208 100%);
+  color: white;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botones-final button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animaciones */
+@keyframes ataque {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.animacion-ataque.activa {
+  animation: ataque 1s forwards;
+}
+
+@keyframes critico {
+  0% {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0);
+  }
+}
+
+.critico {
+  animation: critico 1s forwards;
+}
+
+/* Animaciones de ataques */
+.animacion-puñetazo {
+  background-image: url("../images/ataques/puñetazo.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.animacion-rayo {
+  background-image: url("../images/ataques/rayo.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.animacion-explosion {
+  background-image: url("../images/ataques/explosion.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

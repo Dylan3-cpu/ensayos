@@ -1,0 +1,97 @@
+<!-- html/enfrentamiento.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Hero - Enfrentamiento</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/enfrentamiento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="batalla-theme">
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Arena Hero Logo" id="logo-pequeño">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dc.html">DC</a></li>
+                <li><a href="marvel.html">MARVEL</a></li>
+                <li><a href="arena.html">Arena</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="titulo-seccion">¡Batalla Épica!</h1>
+        
+        <div class="arena-combate">
+            <div class="personaje-combate" id="personaje-izquierda">
+                <div class="imagen-combate"></div>
+                <div class="nombre-personaje"></div>
+                <div class="barra-vida-container">
+                    <div class="vida-texto">100/100</div>
+                    <div class="barra-vida">
+                        <div class="vida-actual"></div>
+                    </div>
+                </div>
+                <div class="ataques">
+                    <button class="ataque-aleatorio">Ataque Aleatorio</button>
+                    <div class="lista-ataques"></div>
+                </div>
+            </div>
+            
+            <div class="area-combate">
+                <div id="animacion-ataque" class="animacion-ataque"></div>
+                <div id="mensaje-combate" class="mensaje-combate"></div>
+            </div>
+            
+            <div class="personaje-combate" id="personaje-derecha">
+                <div class="imagen-combate"></div>
+                <div class="nombre-personaje"></div>
+                <div class="barra-vida-container">
+                    <div class="vida-texto">100/100</div>
+                    <div class="barra-vida">
+                        <div class="vida-actual"></div>
+                    </div>
+                </div>
+                <div class="ataques">
+                    <button class="ataque-aleatorio">Ataque Aleatorio</button>
+                    <div class="lista-ataques"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="resultado-combate" class="resultado-combate" style="display: none;">
+            <h2>¡Combate Finalizado!</h2>
+            <div class="ganador">
+                <h3>¡Ganador!</h3>
+                <div class="imagen-ganador"></div>
+                <div class="nombre-ganador"></div>
+            </div>
+            <div class="estadisticas">
+                <h3>Estadísticas</h3>
+                <ul>
+                    <li>Daño realizado: <span id="daño-realizado"></span></li>
+                    <li>Daño recibido: <span id="daño-recibido"></span></li>
+                    <li>Ataques críticos: <span id="ataques-criticos"></span></li>
+                    <li>Ataques débiles: <span id="ataques-debiles"></span></li>
+                </ul>
+            </div>
+            <div class="botones-final">
+                <button id="btn-revancha">Revancha</button>
+                <button id="btn-nuevos-personajes">Elegir Otros Personajes</button>
+                <button id="btn-nuevo-modo">Cambiar Modo de Juego</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Arena Hero - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- html/arena.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Hero - Arena</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/arena.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="arena-theme">
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Arena Hero Logo" id="logo-pequeño">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dc.html">DC</a></li>
+                <li><a href="marvel.html">MARVEL</a></li>
+                <li><a href="arena.html" class="active">Arena</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="titulo-seccion">Elige tu modo de juego</h1>
+        <div class="modos-juego">
+            <div class="modo" onclick="seleccionarModo('usuario-ia')">
+                <h2>Usuario vs IA</h2>
+                <p>Enfrenta a tus héroes favoritos contra la inteligencia artificial</p>
+                <img src="../images/usuario-ia.png" alt="Usuario vs IA">
+                <div class="modo-overlay">
+                    <span>¡Seleccionar!</span>
+                </div>
+            </div>
+            <div class="modo" onclick="seleccionarModo('usuario-usuario')">
+                <h2>Usuario vs Usuario</h2>
+                <p>Desafía a un amigo en un duelo de superhéroes</p>
+                <img src="../images/usuario-usuario.png" alt="Usuario vs Usuario">
+                <div class="modo-overlay">
+                    <span>¡Seleccionar!</span>
+                </div>
+            </div>
+            <div class="modo" onclick="seleccionarModo('ia-ia')">
+                <h2>IA vs IA</h2>
+                <p>Observa cómo se enfrentan los héroes controlados por la IA</p>
+                <img src="../images/ia-ia.png" alt="IA vs IA">
+                <div class="modo-overlay">
+                    <span>¡Seleccionar!</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Arena Hero - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

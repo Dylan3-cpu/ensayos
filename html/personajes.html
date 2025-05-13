@@ -1,0 +1,65 @@
+<!-- html/personajes.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Hero - Personajes</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/personajes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="personajes-theme">
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Arena Hero Logo" id="logo-pequeño">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dc.html">DC</a></li>
+                <li><a href="marvel.html">MARVEL</a></li>
+                <li><a href="arena.html">Arena</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="titulo-seccion">Selección de Personajes</h1>
+        
+        <div class="seleccion-universo">
+            <button id="btn-dc" class="btn-universo">DC</button>
+            <button id="btn-marvel" class="btn-universo">MARVEL</button>
+        </div>
+        
+        <div id="personajes-container" class="personajes-container">
+            <!-- Aquí se cargarán los personajes según la selección -->
+        </div>
+        
+        <div class="botones-accion" id="botones-accion" style="display: none;">
+            <button id="btn-aleatorio" class="btn-accion">Personaje Aleatorio</button>
+            <button id="btn-luchar" class="btn-accion" disabled>¡Luchar!</button>
+        </div>
+        
+        <div class="seleccion-personajes">
+            <div class="personaje-seleccionado" id="personaje1">
+                <h3>Jugador 1</h3>
+                <div class="imagen-personaje"></div>
+                <div class="info-personaje"></div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="personaje-seleccionado" id="personaje2">
+                <h3>Jugador 2</h3>
+                <div class="imagen-personaje"></div>
+                <div class="info-personaje"></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Arena Hero - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
