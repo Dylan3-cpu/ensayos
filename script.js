@@ -81,7 +81,7 @@ function cargarDatos() {
       nombreClave: "Diana Prince",
       descripcion:
         "Princesa Amazona y guerrera, bendecida por los dioses con habilidades sobrehumanas y destreza en combate.",
-      imagen: "images/wonder-woman.jpg",
+      imagen: "images/wonder_woman.jpg",
       fuerza: 9,
       ataque: 8,
       debilidad: "Ataduras",
@@ -146,7 +146,7 @@ function cargarDatos() {
       nombreClave: "Hal Jordan",
       descripcion:
         "Miembro del Cuerpo de Linternas Verdes, utiliza un anillo de poder alimentado por la fuerza de voluntad.",
-      imagen: "images/green-lantern.jpg",
+      imagen: "images/linterna_verde2.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Miedo",
@@ -171,7 +171,7 @@ function cargarDatos() {
       nombreClave: "Tony Stark",
       descripcion:
         "Genio inventor y multimillonario que creó una armadura de alta tecnología para salvar su vida y combatir el mal.",
-      imagen: "images/iron-man.jpg",
+      imagen: "images/ironman.jpg",
       fuerza: 8,
       ataque: 9,
       debilidad: "Energía",
@@ -214,7 +214,7 @@ function cargarDatos() {
       nombreClave: "Peter Parker",
       descripcion:
         "Joven héroe con habilidades arácnidas que equilibra su vida de superhéroe con sus responsabilidades personales.",
-      imagen: "images/spider-man.jpg",
+      imagen: "images/spiderman.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Responsabilidad",
@@ -257,7 +257,7 @@ function cargarDatos() {
       nombreClave: "Steve Rogers",
       descripcion:
         "El primer vengador, un super soldado con fuerza, agilidad y resistencia mejoradas que porta un escudo de vibranium.",
-      imagen: "images/captain-america.jpg",
+      imagen: "images/capitan_america.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Lealtad",
@@ -278,7 +278,7 @@ function cargarDatos() {
       nombre: "Black Widow",
       nombreClave: "Natasha Romanoff",
       descripcion: "Espía maestra y asesina entrenada, experta en combate y espionaje.",
-      imagen: "images/black-widow.jpg",
+      imagen: "images/viuda_negra.jpg",
       fuerza: 6,
       ataque: 8,
       debilidad: "Pasado",
