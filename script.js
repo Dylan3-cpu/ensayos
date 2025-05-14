@@ -42,6 +42,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Psicológica",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Armadura", "Sigilo", "Knightmare", "Táctico"],
       poderes: ["Maestro detective", "Artes marciales", "Tecnología avanzada", "Estratega"],
       historia:
@@ -64,6 +65,7 @@ function cargarDatos() {
       ataque: 9,
       debilidad: "Kryptonita",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Negro", "Recuperación", "Kryptoniano", "Elite"],
       poderes: ["Super fuerza", "Vuelo", "Visión de calor", "Aliento helado", "Invulnerabilidad"],
       historia:
@@ -86,6 +88,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Ataduras",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Armadura", "Amazona", "Dorado", "Casual"],
       poderes: ["Fuerza sobrehumana", "Velocidad", "Vuelo", "Brazaletes deflectores", "Lazo de la verdad"],
       historia:
@@ -108,6 +111,7 @@ function cargarDatos() {
       ataque: 7,
       debilidad: "Frío",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Futuro", "Velocidad", "Experimental", "Oscuro"],
       poderes: ["Super velocidad", "Viaje en el tiempo", "Faseado molecular", "Lanzamiento de rayos"],
       historia:
@@ -129,6 +133,7 @@ function cargarDatos() {
       ataque: 7,
       debilidad: "Deshidratación",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Rey", "Gladiador", "Atlante", "Casual"],
       poderes: ["Respiración acuática", "Comunicación con vida marina", "Fuerza sobrehumana", "Control del agua"],
       historia:
@@ -151,6 +156,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Miedo",
       vida: 100,
+      universo: "DC", // Añadido para identificar el universo
       trajes: ["Clásico", "Espectro", "Parallax", "Rebirth", "Piloto"],
       poderes: ["Anillo de poder", "Vuelo", "Creación de constructos", "Escudo de energía"],
       historia:
@@ -176,6 +182,7 @@ function cargarDatos() {
       ataque: 9,
       debilidad: "Energía",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Mark III", "Hulkbuster", "Nanotecnología", "Bleeding Edge", "Extremis"],
       poderes: ["Inteligencia superior", "Armadura tecnológica", "Vuelo", "Armas de energía"],
       historia:
@@ -197,6 +204,7 @@ function cargarDatos() {
       ataque: 9,
       debilidad: "Magia",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Asgardiano", "Gladiador", "Rey", "Unworthy", "Ultimate"],
       poderes: ["Fuerza sobrehumana", "Control del rayo", "Vuelo", "Longevidad", "Resistencia"],
       historia:
@@ -219,6 +227,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Responsabilidad",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Clásico", "Simbionte", "Iron Spider", "Stealth", "Future Foundation"],
       poderes: ["Fuerza proporcional", "Agilidad sobrehumana", "Sentido arácnido", "Trepamuros", "Lanzatelarañas"],
       historia:
@@ -240,6 +249,7 @@ function cargarDatos() {
       ataque: 10,
       debilidad: "Control mental",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Clásico", "Gladiador", "Profesor", "Joe Fixit", "Worldbreaker"],
       poderes: ["Fuerza ilimitada", "Regeneración", "Resistencia", "Saltos enormes", "Inmunidad a toxinas"],
       historia:
@@ -262,6 +272,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Lealtad",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Clásico", "Stealth", "Vengador", "Nómada", "Comandante"],
       poderes: ["Fuerza mejorada", "Agilidad sobrehumana", "Resistencia", "Curación acelerada", "Maestro táctico"],
       historia:
@@ -283,6 +294,7 @@ function cargarDatos() {
       ataque: 8,
       debilidad: "Pasado",
       vida: 100,
+      universo: "MARVEL", // Añadido para identificar el universo
       trajes: ["Clásico", "Stealth", "Blanco", "Táctico", "Vengador"],
       poderes: [
         "Maestría en artes marciales",
@@ -304,13 +316,9 @@ function cargarDatos() {
 
   // Si estamos en la página DcMv.html, cargar tarjetas DC y Marvel
   if (window.location.pathname.includes("DcMv.html")) {
-    // Verificar si hay un hash en la URL para determinar qué sección mostrar
-    if (window.location.hash === "#marvelpin") {
-      cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
-    } else {
-      // Por defecto o si es #dcpin, cargar DC
-      cargarTarjetasPersonajes("dc-heroes", personajesDC)
-    }
+    // Cargar ambas secciones de personajes
+    cargarTarjetasPersonajes("dc-heroes", personajesDC)
+    cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
   }
 }
 
@@ -368,14 +376,19 @@ function configurarEventosPagina() {
 
   // Si estamos en la página DcMv.html, configurar eventos para cargar las tarjetas según el hash
   if (window.location.pathname.includes("DcMv.html")) {
-    // Escuchar cambios en el hash de la URL
-    window.addEventListener("hashchange", () => {
-      if (window.location.hash === "#marvelpin") {
-        cargarTarjetasPersonajes("marvel-heroes", personajesMarvel)
-      } else if (window.location.hash === "#dcpin") {
-        cargarTarjetasPersonajes("dc-heroes", personajesDC)
-      }
-    })
+    // Actualizar la clase active en los enlaces según el hash
+    function actualizarNavegacion() {
+      const hash = window.location.hash || '#dcpin';
+      const dcLink = document.querySelector('a[href="#dcpin"]');
+      const marvelLink = document.querySelector('a[href="#marvelpin"]');
+      
+      if (dcLink) dcLink.classList.toggle('active', hash === '#dcpin');
+      if (marvelLink) marvelLink.classList.toggle('active', hash === '#marvelpin');
+    }
+    
+    // Actualizar navegación al cargar y al cambiar el hash
+    actualizarNavegacion();
+    window.addEventListener('hashchange', actualizarNavegacion);
   }
 }
 
@@ -482,6 +495,7 @@ function mostrarPersonajesUniverso(universo) {
     const card = document.createElement("div")
     card.className = "personaje-card"
     card.dataset.id = personaje.id
+    card.dataset.universo = personaje.universo // Añadido para identificar el universo
 
     // Corregir la ruta de la imagen
     const rutaImagen = `${rutaBase}${personaje.imagen || "images/placeholder.jpg"}`
@@ -517,12 +531,58 @@ function seleccionarPersonaje(personaje) {
   // Determinar la ruta base para las imágenes
   const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
 
+  // CORRECCIÓN: Verificar si el personaje ya está seleccionado para permitir deseleccionarlo
+  if (personajeSeleccionado1 && personaje.id === personajeSeleccionado1.id && personaje.universo === personajeSeleccionado1.universo) {
+    // Deseleccionar el personaje 1
+    personajeSeleccionado1 = null
+    
+    // Quitar la marca de seleccionado
+    cards.forEach((card) => {
+      if (Number.parseInt(card.dataset.id) === personaje.id && card.dataset.universo === personaje.universo) {
+        card.classList.remove("seleccionado")
+      }
+    })
+    
+    // Limpiar la visualización del personaje 1
+    const divPersonaje1 = document.getElementById("personaje1")
+    divPersonaje1.querySelector(".imagen-personaje").innerHTML = ""
+    divPersonaje1.querySelector(".info-personaje").innerHTML = ""
+    
+    // Deshabilitar el botón de luchar
+    document.getElementById("btn-luchar").disabled = true
+    
+    return
+  }
+  
+  if (personajeSeleccionado2 && personaje.id === personajeSeleccionado2.id && personaje.universo === personajeSeleccionado2.universo) {
+    // Deseleccionar el personaje 2
+    personajeSeleccionado2 = null
+    
+    // Quitar la marca de seleccionado
+    cards.forEach((card) => {
+      if (Number.parseInt(card.dataset.id) === personaje.id && card.dataset.universo === personaje.universo) {
+        card.classList.remove("seleccionado")
+      }
+    })
+    
+    // Limpiar la visualización del personaje 2
+    const divPersonaje2 = document.getElementById("personaje2")
+    divPersonaje2.querySelector(".imagen-personaje").innerHTML = ""
+    divPersonaje2.querySelector(".info-personaje").innerHTML = ""
+    
+    // Deshabilitar el botón de luchar
+    document.getElementById("btn-luchar").disabled = true
+    
+    return
+  }
+
+  // CORRECCIÓN: Permitir seleccionar cualquier personaje para cualquier jugador
   if (!personajeSeleccionado1) {
     personajeSeleccionado1 = personaje
 
     // Marcar la tarjeta como seleccionada
     cards.forEach((card) => {
-      if (Number.parseInt(card.dataset.id) === personaje.id) {
+      if (Number.parseInt(card.dataset.id) === personaje.id && card.dataset.universo === personaje.universo) {
         card.classList.add("seleccionado")
       }
     })
@@ -540,12 +600,12 @@ function seleccionarPersonaje(personaje) {
             <p><strong>Vida:</strong> <span class="stat-valor">${personaje.vida}</span></p>
             <p><strong>Debilidad:</strong> <span class="stat-valor">${personaje.debilidad}</span></p>
         `
-  } else if (!personajeSeleccionado2 && personaje.id !== personajeSeleccionado1.id) {
+  } else if (!personajeSeleccionado2) {
     personajeSeleccionado2 = personaje
 
     // Marcar la tarjeta como seleccionada
     cards.forEach((card) => {
-      if (Number.parseInt(card.dataset.id) === personaje.id) {
+      if (Number.parseInt(card.dataset.id) === personaje.id && card.dataset.universo === personaje.universo) {
         card.classList.add("seleccionado")
       }
     })
@@ -583,11 +643,11 @@ function seleccionarPersonajeAleatorio() {
     const indiceAleatorio = Math.floor(Math.random() * personajes.length)
     seleccionarPersonaje(personajes[indiceAleatorio])
   }
-  // Si no hay personaje 2 seleccionado, seleccionar uno aleatorio diferente al personaje 1
+  // Si no hay personaje 2 seleccionado, seleccionar uno aleatorio
   else if (!personajeSeleccionado2) {
-    const personajesDisponibles = personajes.filter((p) => p.id !== personajeSeleccionado1.id)
-    const indiceAleatorio = Math.floor(Math.random() * personajesDisponibles.length)
-    seleccionarPersonaje(personajesDisponibles[indiceAleatorio])
+    // CORRECCIÓN: Permitir seleccionar cualquier personaje, incluso el mismo que el jugador 1
+    const indiceAleatorio = Math.floor(Math.random() * personajes.length)
+    seleccionarPersonaje(personajes[indiceAleatorio])
   }
 }
 
@@ -715,25 +775,22 @@ function configurarModoJuego() {
 
 // Función para realizar ataque aleatorio
 function realizarAtaqueAleatorio() {
-  const personaje1 = JSON.parse(localStorage.getItem("personaje1"))
-  const personaje2 = JSON.parse(localStorage.getItem("personaje2"))
-
   if (turnoJugador1) {
-    const ataqueAleatorio = personaje1.ataques[Math.floor(Math.random() * personaje1.ataques.length)]
-    realizarAtaque(personaje1, personaje2, ataqueAleatorio)
+    const ataqueAleatorio = personajeSeleccionado1.ataques[Math.floor(Math.random() * personajeSeleccionado1.ataques.length)]
+    realizarAtaque(personajeSeleccionado1, personajeSeleccionado2, ataqueAleatorio)
   } else {
-    const ataqueAleatorio = personaje2.ataques[Math.floor(Math.random() * personaje2.ataques.length)]
-    realizarAtaque(personaje2, personaje1, ataqueAleatorio)
+    const ataqueAleatorio = personajeSeleccionado2.ataques[Math.floor(Math.random() * personajeSeleccionado2.ataques.length)]
+    realizarAtaque(personajeSeleccionado2, personajeSeleccionado1, ataqueAleatorio)
   }
 }
 
 // Función para realizar ataque
 function realizarAtaque(atacante, defensor, ataque) {
-  // Verificar si es el turno correcto
-  if (
-    (turnoJugador1 && atacante.id !== personajeSeleccionado1.id) ||
-    (!turnoJugador1 && atacante.id !== personajeSeleccionado2.id)
-  ) {
+  // CORRECCIÓN: Verificar si es el turno correcto usando ID y universo
+  const esAtacante1 = atacante.id === personajeSeleccionado1.id && atacante.universo === personajeSeleccionado1.universo;
+  const esAtacante2 = atacante.id === personajeSeleccionado2.id && atacante.universo === personajeSeleccionado2.universo;
+  
+  if ((turnoJugador1 && !esAtacante1) || (!turnoJugador1 && !esAtacante2)) {
     mostrarMensaje("¡No es tu turno!")
     return
   }
@@ -767,20 +824,71 @@ function realizarAtaque(atacante, defensor, ataque) {
   // Mostrar animación de ataque
   mostrarAnimacionAtaque(ataque.nombre, ataque.animacion, esCritico)
 
-  // Actualizar vida del defensor
-  actualizarVida(defensor, daño)
+  // CORRECCIÓN: Crear una copia del defensor para no modificar el original
+  const defensorActualizado = JSON.parse(JSON.stringify(defensor));
+  
+  // Restar daño a la vida del defensor
+  defensorActualizado.vida -= daño;
+  if (defensorActualizado.vida < 0) defensorActualizado.vida = 0;
+  
+  // Actualizar la vida en la interfaz
+  actualizarVidaEnInterfaz(defensorActualizado);
+  
+  // Actualizar el defensor en las variables globales y localStorage
+  if (defensorActualizado.id === personajeSeleccionado1.id && defensorActualizado.universo === personajeSeleccionado1.universo) {
+    personajeSeleccionado1 = defensorActualizado;
+    localStorage.setItem("personaje1", JSON.stringify(defensorActualizado));
+  } else {
+    personajeSeleccionado2 = defensorActualizado;
+    localStorage.setItem("personaje2", JSON.stringify(defensorActualizado));
+  }
+  
+  // Verificar si el combate ha terminado
+  if (defensorActualizado.vida <= 0) {
+    finalizarCombate(atacante);
+    return;
+  }
 
   // Cambiar turno
-  turnoJugador1 = !turnoJugador1
+  turnoJugador1 = !turnoJugador1;
 
   // Deshabilitar botones según el turno
-  actualizarBotonesTurno()
+  actualizarBotonesTurno();
 
   // Si es modo usuario-ia y ahora es turno de la IA
-  const modo = localStorage.getItem("modoJuego")
+  const modo = localStorage.getItem("modoJuego");
   if (modo === "usuario-ia" && !turnoJugador1) {
     // La IA realiza su ataque después de un breve retraso
-    setTimeout(ataqueIA, 1500)
+    setTimeout(ataqueIA, 1500);
+  }
+}
+
+// NUEVA FUNCIÓN: Actualizar vida en la interfaz
+function actualizarVidaEnInterfaz(personaje) {
+  const esPersonaje1 = personaje.id === personajeSeleccionado1.id && personaje.universo === personajeSeleccionado1.universo;
+  const vidaInicial = esPersonaje1 ? vidaInicial1 : vidaInicial2;
+  
+  // Calcular porcentaje de vida
+  const porcentajeVida = (personaje.vida / vidaInicial) * 100;
+  
+  // Seleccionar elementos de la interfaz
+  const barraVida = document.querySelector(
+    esPersonaje1 ? "#personaje-izquierda .vida-actual" : "#personaje-derecha .vida-actual"
+  );
+  
+  const textoVida = document.querySelector(
+    esPersonaje1 ? "#personaje-izquierda .vida-texto" : "#personaje-derecha .vida-texto"
+  );
+  
+  // Actualizar barra de vida
+  barraVida.style.width = porcentajeVida + "%";
+  textoVida.textContent = `${personaje.vida}/${vidaInicial}`;
+  
+  // Cambiar color según la vida restante
+  if (porcentajeVida < 30) {
+    barraVida.style.background = "linear-gradient(90deg, #ff0000, #ff5252)";
+  } else if (porcentajeVida < 60) {
+    barraVida.style.background = "linear-gradient(90deg, #ffa500, #ffb74d)";
   }
 }
 
@@ -831,80 +939,41 @@ function mostrarAnimacionAtaque(nombreAtaque, animacion, esCritico) {
   }, 1000)
 }
 
-// Función para actualizar vida
-function actualizarVida(personaje, daño) {
-  // Restar daño a la vida del personaje
-  personaje.vida -= daño
-  if (personaje.vida < 0) personaje.vida = 0
-
-  // Actualizar barra de vida
-  const porcentajeVida =
-    (personaje.vida / (personaje.id === personajeSeleccionado1.id ? vidaInicial1 : vidaInicial2)) * 100
-  const barraVida = document.querySelector(
-    personaje.id === personajeSeleccionado1.id
-      ? "#personaje-izquierda .vida-actual"
-      : "#personaje-derecha .vida-actual",
-  )
-  const textoVida = document.querySelector(
-    personaje.id === personajeSeleccionado1.id ? "#personaje-izquierda .vida-texto" : "#personaje-derecha .vida-texto",
-  )
-
-  barraVida.style.width = porcentajeVida + "%"
-  textoVida.textContent = `${personaje.vida}/${personaje.id === personajeSeleccionado1.id ? vidaInicial1 : vidaInicial2}`
-
-  // Cambiar color según la vida restante
-  if (porcentajeVida < 30) {
-    barraVida.style.background = "linear-gradient(90deg, #ff0000, #ff5252)"
-  } else if (porcentajeVida < 60) {
-    barraVida.style.background = "linear-gradient(90deg, #ffa500, #ffb74d)"
-  }
-
-  // Guardar personaje actualizado
-  if (personaje.id === personajeSeleccionado1.id) {
-    localStorage.setItem("personaje1", JSON.stringify(personaje))
-  } else {
-    localStorage.setItem("personaje2", JSON.stringify(personaje))
-  }
-
-  // Verificar si el combate ha terminado
-  if (personaje.vida <= 0) {
-    finalizarCombate(personaje.id === personajeSeleccionado1.id ? personajeSeleccionado2 : personajeSeleccionado1)
-  }
-}
-
 // Función para ataque de la IA
 function ataqueIA() {
-  const personaje2 = JSON.parse(localStorage.getItem("personaje2"))
-  const personaje1 = JSON.parse(localStorage.getItem("personaje1"))
-
+  // CORRECCIÓN: Usar las variables globales actualizadas
+  if (!personajeSeleccionado2 || !personajeSeleccionado1) return;
+  
   // La IA elige un ataque aleatorio
-  const ataqueAleatorio = personaje2.ataques[Math.floor(Math.random() * personaje2.ataques.length)]
+  const ataqueAleatorio = personajeSeleccionado2.ataques[Math.floor(Math.random() * personajeSeleccionado2.ataques.length)]
 
   // Realizar el ataque
-  realizarAtaque(personaje2, personaje1, ataqueAleatorio)
+  realizarAtaque(personajeSeleccionado2, personajeSeleccionado1, ataqueAleatorio)
 }
 
 // Función para combate automático (modo IA vs IA)
 function combateAutomatico() {
-  const personaje1 = JSON.parse(localStorage.getItem("personaje1"))
-  const personaje2 = JSON.parse(localStorage.getItem("personaje2"))
-
+  // CORRECCIÓN: Usar las variables globales actualizadas
+  if (!personajeSeleccionado1 || !personajeSeleccionado2) return;
+  
   // Si el combate ya terminó no hacer nada
-  if (personaje1.vida <= 0 || personaje2.vida <= 0) {
+  if (personajeSeleccionado1.vida <= 0 || personajeSeleccionado2.vida <= 0) {
     return
   }
 
   // Elegir ataque aleatorio según el turno
   if (turnoJugador1) {
-    const ataqueAleatorio = personaje1.ataques[Math.floor(Math.random() * personaje1.ataques.length)]
-    realizarAtaque(personaje1, personaje2, ataqueAleatorio)
+    const ataqueAleatorio = personajeSeleccionado1.ataques[Math.floor(Math.random() * personajeSeleccionado1.ataques.length)]
+    realizarAtaque(personajeSeleccionado1, personajeSeleccionado2, ataqueAleatorio)
   } else {
-    const ataqueAleatorio = personaje2.ataques[Math.floor(Math.random() * personaje2.ataques.length)]
-    realizarAtaque(personaje2, personaje1, ataqueAleatorio)
+    const ataqueAleatorio = personajeSeleccionado2.ataques[Math.floor(Math.random() * personajeSeleccionado2.ataques.length)]
+    realizarAtaque(personajeSeleccionado2, personajeSeleccionado1, ataqueAleatorio)
   }
 
   // Continuar el combate automático después de un tiempo
-  setTimeout(combateAutomatico, 2000)
+  if (personajeSeleccionado1.vida > 0 && personajeSeleccionado2.vida > 0) {
+    setTimeout(combateAutomatico, 2000)
+  }
 }
 
 // Función para finalizar combate
