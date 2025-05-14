@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con tema tecnológico -->
+  <rect width="800" height="500" fill="#0a192f" rx="10" ry="10"/>
+  
+  <!-- Rejilla/grid de fondo estilo tecnológico -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#193051" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- Círculo central con efecto de pulso -->
+  <circle cx="400" cy="250" r="120" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.2">
+    <animate attributeName="r" values="120;140;120" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="250" r="80" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.4">
+    <animate attributeName="r" values="80;100;80" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Línea divisoria central con efecto de brillo -->
+  <line x1="400" y1="100" x2="400" y2="400" stroke="#64ffda" stroke-width="3" stroke-dasharray="10,5"/>
+  <circle cx="400" cy="250" r="30" fill="#6e56cf" opacity="0.5">
+    <animate attributeName="r" values="20;40;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Texto VS en el centro -->
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#6e56cf" stroke="#64ffda" stroke-width="1">VS</text>
+  
+  <!-- IA 1 (lado izquierdo) - Estilo cian/azul -->
+  <g id="ai1-side">
+    <!-- Cabeza robótica -->
+    <rect x="150" y="135" width="100" height="90" rx="10" ry="10" fill="#0b5563" stroke="#64ffda" stroke-width="2"/>
+    <circle cx="200" cy="180" r="45" fill="#0b5563" stroke="#64ffda" stroke-width="2"/>
+    
+    <!-- Detalles de cara robot -->
+    <circle cx="180" cy="165" r="8" fill="#64ffda">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="165" r="8" fill="#64ffda">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Boca/panel de control -->
+    <rect x="175" y="190" width="50" height="10" rx="2" ry="2" fill="#64ffda"/>
+    
+    <!-- Antenas -->
+    <line x1="180" y1="135" x2="170" y2="115" stroke="#64ffda" stroke-width="2"/>
+    <circle cx="170" cy="115" r="3" fill="#64ffda"/>
+    <line x1="220" y1="135" x2="230" y2="115" stroke="#64ffda" stroke-width="2"/>
+    <circle cx="230" cy="115" r="3" fill="#64ffda"/>
+    
+    <!-- Cuerpo robot -->
+    <path d="M160 225 L240 225 L250 320 L150 320 Z" fill="#0b5563" stroke="#64ffda" stroke-width="2"/>
+    
+    <!-- Circuitos -->
+    <line x1="170" y1="240" x2="230" y2="240" stroke="#64ffda" stroke-width="1"/>
+    <line x1="170" y1="260" x2="230" y2="260" stroke="#64ffda" stroke-width="1"/>
+    <line x1="170" y1="280" x2="230" y2="280" stroke="#64ffda" stroke-width="1"/>
+    <line x1="170" y1="300" x2="230" y2="300" stroke="#64ffda" stroke-width="1"/>
+    
+    <!-- Puntos de conexión -->
+    <circle cx="180" cy="240" r="3" fill="#6e56cf"/>
+    <circle cx="220" cy="240" r="3" fill="#6e56cf"/>
+    <circle cx="180" cy="280" r="3" fill="#6e56cf"/>
+    <circle cx="220" cy="280" r="3" fill="#6e56cf"/>
+    
+    <!-- Texto IA 1 -->
+    <text x="200" y="380" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f0f0f0">IA 1</text>
+    
+    <!-- Elemento tecnológico flotante -->
+    <g opacity="0.8">
+      <circle cx="120" cy="150" r="15" fill="none" stroke="#64ffda" stroke-width="1">
+        <animate attributeName="r" values="13;16;13" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="150" r="8" fill="none" stroke="#64ffda" stroke-width="1"/>
+      <line x1="110" y1="150" x2="130" y2="150" stroke="#64ffda" stroke-width="1"/>
+      <line x1="120" y1="140" x2="120" y2="160" stroke="#64ffda" stroke-width="1"/>
+    </g>
+    
+    <!-- Código binario flotante -->
+    <text x="100" y="100" font-family="Courier, monospace" font-size="10" fill="#64ffda" opacity="0.8">10110</text>
+    <text x="140" y="120" font-family="Courier, monospace" font-size="10" fill="#64ffda" opacity="0.8">01001</text>
+    <text x="90" y="140" font-family="Courier, monospace" font-size="10" fill="#64ffda" opacity="0.8">11010</text>
+    
+    <!-- Aura tecnológica -->
+    <circle cx="200" cy="230" r="100" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.2">
+      <animate attributeName="r" values="95;105;95" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- IA 2 (lado derecho) - Estilo púrpura -->
+  <g id="ai2-side">
+    <!-- Cabeza robótica -->
+    <rect x="550" y="135" width="100" height="90" rx="10" ry="10" fill="#4c2882" stroke="#6e56cf" stroke-width="2"/>
+    <circle cx="600" cy="180" r="45" fill="#4c2882" stroke="#6e56cf" stroke-width="2"/>
+    
+    <!-- Detalles de cara robot -->
+    <circle cx="580" cy="165" r="8" fill="#6e56cf">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="620" cy="165" r="8" fill="#6e56cf">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Boca/panel de control diferente del IA 1 -->
+    <path d="M575 190 L625 190 L615 200 L585 200 Z" fill="#6e56cf"/>
+    
+    <!-- Antenas -->
+    <line x1="580" y1="135" x2="570" y2="115" stroke="#6e56cf" stroke-width="2"/>
+    <circle cx="570" cy="115" r="3" fill="#6e56cf"/>
+    <line x1="620" y1="135" x2="630" y2="115" stroke="#6e56cf" stroke-width="2"/>
+    <circle cx="630" cy="115" r="3" fill="#6e56cf"/>
+    
+    <!-- Cuerpo robot -->
+    <path d="M560 225 L640 225 L650 320 L550 320 Z" fill="#4c2882" stroke="#6e56cf" stroke-width="2"/>
+    
+    <!-- Circuitos -->
+    <line x1="570" y1="240" x2="630" y2="240" stroke="#6e56cf" stroke-width="1"/>
+    <line x1="570" y1="260" x2="630" y2="260" stroke="#6e56cf" stroke-width="1"/>
+    <line x1="570" y1="280" x2="630" y2="280" stroke="#6e56cf" stroke-width="1"/>
+    <line x1="570" y1="300" x2="630" y2="300" stroke="#6e56cf" stroke-width="1"/>
+    
+    <!-- Puntos de conexión -->
+    <circle cx="580" cy="240" r="3" fill="#64ffda"/>
+    <circle cx="620" cy="240" r="3" fill="#64ffda"/>
+    <circle cx="580" cy="280" r="3" fill="#64ffda"/>
+    <circle cx="620" cy="280" r="3" fill="#64ffda"/>
+    
+    <!-- Texto IA 2 -->
+    <text x="600" y="380" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f0f0f0">IA 2</text>
+    
+    <!-- Elemento tecnológico flotante -->
+    <g opacity="0.8">
+      <circle cx="680" cy="150" r="15" fill="none" stroke="#6e56cf" stroke-width="1">
+        <animate attributeName="r" values="13;16;13" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="670" y="140" width="20" height="20" fill="none" stroke="#6e56cf" stroke-width="1"/>
+      <line x1="670" y1="150" x2="690" y2="150" stroke="#6e56cf" stroke-width="1"/>
+      <line x1="680" y1="140" x2="680" y2="160" stroke="#6e56cf" stroke-width="1"/>
+    </g>
+    
+    <!-- Código binario flotante -->
+    <text x="670" y="100" font-family="Courier, monospace" font-size="10" fill="#6e56cf" opacity="0.8">01011</text>
+    <text x="650" y="120" font-family="Courier, monospace" font-size="10" fill="#6e56cf" opacity="0.8">10100</text>
+    <text x="690" y="140" font-family="Courier, monospace" font-size="10" fill="#6e56cf" opacity="0.8">00111</text>
+    
+    <!-- Aura tecnológica -->
+    <circle cx="600" cy="230" r="100" fill="none" stroke="#6e56cf" stroke-width="1" opacity="0.2">
+      <animate attributeName="r" values="95;105;95" dur="4s" repeatCount="indefinite"/> 
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Efectos de datos en el centro -->
+  <g id="data-transfer">
+    <!-- Líneas de datos que fluyen -->
+    <path d="M300 200 Q350 230 300 260" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.7">
+      <animate attributeName="d" values="M300 200 Q350 230 300 260;M300 210 Q350 240 300 270;M300 200 Q350 230 300 260" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M500 200 Q450 230 500 260" fill="none" stroke="#6e56cf" stroke-width="1" opacity="0.7">
+      <animate attributeName="d" values="M500 200 Q450 230 500 260;M500 210 Q450 240 500 270;M500 200 Q450 230 500 260" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Partículas de datos -->
+    <circle cx="350" cy="230" r="3" fill="#64ffda">
+      <animate attributeName="cx" values="300;350;400" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="230" r="3" fill="#6e56cf">
+      <animate attributeName="cx" values="500;450;400" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="240" r="2" fill="#64ffda">
+      <animate attributeName="cx" values="300;350;400" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="240" r="2" fill="#6e56cf">
+      <animate attributeName="cx" values="500;450;400" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Título del juego en la parte superior -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#f0f0f0">IA VS IA</text>
+  
+  <!-- Elementos de interfaz de juego -->
+  <g id="game-ui-elements">
+    <!-- Barras de procesamiento -->
+    <rect x="100" y="100" width="200" height="15" rx="5" ry="5" fill="none" stroke="#64ffda" stroke-width="1"/>
+    <rect x="100" y="100" width="120" height="15" rx="5" ry="5" fill="#64ffda" opacity="0.5">
+      <animate attributeName="width" values="120;200;120" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="500" y="100" width="200" height="15" rx="5" ry="5" fill="none" stroke="#6e56cf" stroke-width="1"/>
+    <rect x="500" y="100" width="150" height="15" rx="5" ry="5" fill="#6e56cf" opacity="0.5">
+      <animate attributeName="width" values="150;200;150" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Etiquetas de estado -->
+    <text x="150" y="85" font-family="Courier, monospace" font-size="12" text-anchor="start" fill="#64ffda">PROCESANDO...</text>
+    <text x="600" y="85" font-family="Courier, monospace" font-size="12" text-anchor="end" fill="#6e56cf">ANALIZANDO...</text>
+  </g>
+  
+  <!-- Circuitos impresos en el fondo -->
+  <g opacity="0.1">
+    <path d="M50 50 L100 50 L100 100 L150 100" fill="none" stroke="#64ffda" stroke-width="2"/>
+    <path d="M750 50 L700 50 L700 100 L650 100" fill="none" stroke="#6e56cf" stroke-width="2"/>
+    <path d="M50 450 L100 450 L100 400 L150 400" fill="none" stroke="#64ffda" stroke-width="2"/>
+    <path d="M750 450 L700 450 L700 400 L650 400" fill="none" stroke="#6e56cf" stroke-width="2"/>
+  </g>
+  
+  <!-- Nodos de circuito -->
+  <circle cx="100" cy="50" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="100" cy="100" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="150" cy="100" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="700" cy="50" r="3" fill="#6e56cf" opacity="0.3"/>
+  <circle cx="700" cy="100" r="3" fill="#6e56cf" opacity="0.3"/>
+  <circle cx="650" cy="100" r="3" fill="#6e56cf" opacity="0.3"/>
+  <circle cx="100" cy="450" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="100" cy="400" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="150" cy="400" r="3" fill="#64ffda" opacity="0.3"/>
+  <circle cx="700" cy="450" r="3" fill="#6e56cf" opacity="0.3"/>
+  <circle cx="700" cy="400" r="3" fill="#6e56cf" opacity="0.3"/>
+  <circle cx="650" cy="400" r="3" fill="#6e56cf" opacity="0.3"/>
+</svg>

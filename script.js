@@ -359,9 +359,10 @@ function configurarEventosPagina() {
       btn.addEventListener("click", realizarAtaqueAleatorio)
     })
 
+    // FIX: Corregido el evento de revancha para reiniciar correctamente la vida
     document.getElementById("btn-revancha").addEventListener("click", () => {
-      location.reload()
-    })
+      reiniciarCombate()
+    });
 
     document.getElementById("btn-nuevos-personajes").addEventListener("click", () => {
       const rutaBase = window.location.pathname.includes("/html/") ? "" : "html/"
@@ -824,29 +825,43 @@ function realizarAtaque(atacante, defensor, ataque) {
   // Mostrar animación de ataque
   mostrarAnimacionAtaque(ataque.nombre, ataque.animacion, esCritico)
 
-  // CORRECCIÓN: Crear una copia del defensor para no modificar el original
-  const defensorActualizado = JSON.parse(JSON.stringify(defensor));
+  // FIX: Crear copias profundas de los personajes para evitar problemas de referencia
+  let personaje1Actualizado = JSON.parse(JSON.stringify(personajeSeleccionado1));
+  let personaje2Actualizado = JSON.parse(JSON.stringify(personajeSeleccionado2));
   
   // Restar daño a la vida del defensor
-  defensorActualizado.vida -= daño;
-  if (defensorActualizado.vida < 0) defensorActualizado.vida = 0;
-  
-  // Actualizar la vida en la interfaz
-  actualizarVidaEnInterfaz(defensorActualizado);
-  
-  // Actualizar el defensor en las variables globales y localStorage
-  if (defensorActualizado.id === personajeSeleccionado1.id && defensorActualizado.universo === personajeSeleccionado1.universo) {
-    personajeSeleccionado1 = defensorActualizado;
-    localStorage.setItem("personaje1", JSON.stringify(defensorActualizado));
+  if (esAtacante1) {
+    personaje2Actualizado.vida -= daño;
+    if (personaje2Actualizado.vida < 0) personaje2Actualizado.vida = 0;
+    
+    // Actualizar el personaje2 en la variable global y localStorage
+    personajeSeleccionado2 = personaje2Actualizado;
+    localStorage.setItem("personaje2", JSON.stringify(personaje2Actualizado));
+    
+    // Actualizar la vida en la interfaz
+    actualizarVidaEnInterfaz(personaje2Actualizado, false);
+    
+    // Verificar si el combate ha terminado
+    if (personaje2Actualizado.vida <= 0) {
+      finalizarCombate(atacante);
+      return;
+    }
   } else {
-    personajeSeleccionado2 = defensorActualizado;
-    localStorage.setItem("personaje2", JSON.stringify(defensorActualizado));
-  }
-  
-  // Verificar si el combate ha terminado
-  if (defensorActualizado.vida <= 0) {
-    finalizarCombate(atacante);
-    return;
+    personaje1Actualizado.vida -= daño;
+    if (personaje1Actualizado.vida < 0) personaje1Actualizado.vida = 0;
+    
+    // Actualizar el personaje1 en la variable global y localStorage
+    personajeSeleccionado1 = personaje1Actualizado;
+    localStorage.setItem("personaje1", JSON.stringify(personaje1Actualizado));
+    
+    // Actualizar la vida en la interfaz
+    actualizarVidaEnInterfaz(personaje1Actualizado, true);
+    
+    // Verificar si el combate ha terminado
+    if (personaje1Actualizado.vida <= 0) {
+      finalizarCombate(atacante);
+      return;
+    }
   }
 
   // Cambiar turno
@@ -864,8 +879,7 @@ function realizarAtaque(atacante, defensor, ataque) {
 }
 
 // NUEVA FUNCIÓN: Actualizar vida en la interfaz
-function actualizarVidaEnInterfaz(personaje) {
-  const esPersonaje1 = personaje.id === personajeSeleccionado1.id && personaje.universo === personajeSeleccionado1.universo;
+function actualizarVidaEnInterfaz(personaje, esPersonaje1) {
   const vidaInicial = esPersonaje1 ? vidaInicial1 : vidaInicial2;
   
   // Calcular porcentaje de vida
@@ -1001,6 +1015,65 @@ function finalizarCombate(ganador) {
   document.querySelectorAll(".ataque-btn, .ataque-aleatorio").forEach((btn) => {
     btn.disabled = true
   })
+}
+
+// FIX: Nueva función para reiniciar el combate correctamente
+function reiniciarCombate() {
+  // Ocultar el resultado del combate
+  document.getElementById("resultado-combate").style.display = "none";
+  
+  // Reiniciar estadísticas
+  estadisticasCombate.dañoRealizado = 0;
+  estadisticasCombate.dañoRecibido = 0;
+  estadisticasCombate.ataquesCriticos = 0;
+  estadisticasCombate.ataquesDébiles = 0;
+  
+  // Reiniciar el turno
+  turnoJugador1 = true;
+  
+  // Obtener los personajes originales
+  const personaje1Original = JSON.parse(localStorage.getItem("personaje1"));
+  const personaje2Original = JSON.parse(localStorage.getItem("personaje2"));
+  
+  // FIX: Restaurar la vida a los valores iniciales
+  personaje1Original.vida = vidaInicial1;
+  personaje2Original.vida = vidaInicial2;
+  
+  // Actualizar los personajes en localStorage y variables globales
+  localStorage.setItem("personaje1", JSON.stringify(personaje1Original));
+  localStorage.setItem("personaje2", JSON.stringify(personaje2Original));
+  personajeSeleccionado1 = personaje1Original;
+  personajeSeleccionado2 = personaje2Original;
+  
+  // Actualizar la interfaz
+  const divIzquierda = document.getElementById("personaje-izquierda");
+  const divDerecha = document.getElementById("personaje-derecha");
+  
+  // Actualizar barras de vida
+  divIzquierda.querySelector(".vida-actual").style.width = "100%";
+  divIzquierda.querySelector(".vida-texto").textContent = `${vidaInicial1}/${vidaInicial1}`;
+  divIzquierda.querySelector(".vida-actual").style.background = "linear-gradient(90deg, #4caf50, #8bc34a)";
+  
+  divDerecha.querySelector(".vida-actual").style.width = "100%";
+  divDerecha.querySelector(".vida-texto").textContent = `${vidaInicial2}/${vidaInicial2}`;
+  divDerecha.querySelector(".vida-actual").style.background = "linear-gradient(90deg, #4caf50, #8bc34a)";
+  
+  // Habilitar/deshabilitar botones según el modo de juego
+  const modo = localStorage.getItem("modoJuego");
+  
+  if (modo === "usuario-usuario") {
+    // Habilitar botones del jugador 1, deshabilitar los del jugador 2
+    divIzquierda.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    divDerecha.querySelectorAll("button").forEach(btn => btn.disabled = true);
+  } else if (modo === "usuario-ia") {
+    // Habilitar botones del jugador 1, deshabilitar los de la IA
+    divIzquierda.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    divDerecha.querySelectorAll("button").forEach(btn => btn.disabled = true);
+  } else if (modo === "ia-ia") {
+    // Deshabilitar todos los botones y reiniciar el combate automático
+    document.querySelectorAll(".personaje-combate button").forEach(btn => btn.disabled = true);
+    setTimeout(combateAutomatico, 1000);
+  }
 }
 
 // Función para mostrar mensaje
