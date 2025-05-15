@@ -37,7 +37,7 @@ function cargarDatos() {
       nombreClave: "Bruce Wayne",
       descripcion:
         "El Caballero Oscuro de Gotham City, un vigilante que lucha contra el crimen utilizando su intelecto, habilidades físicas y tecnología avanzada.",
-      imagen: "images/batman.jpg",
+      imagen: src="images/DC/batman/batman.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Psicológica",
@@ -48,10 +48,10 @@ function cargarDatos() {
       historia:
         "Tras presenciar el asesinato de sus padres cuando era niño, Bruce Wayne juró venganza contra los criminales, entrenando física y mentalmente para combatir el mal en Gotham City.",
       ataques: [
-        { nombre: "Batarang", daño: 15, tipo: "Distancia", animacion: "batarang" },
-        { nombre: "Puñetazo", daño: 20, tipo: "Físico", animacion: "puñetazo" },
-        { nombre: "Bomba de humo", daño: 10, tipo: "Área", animacion: "humo" },
-        { nombre: "Ataque sorpresa", daño: 25, tipo: "Crítico", animacion: "sorpresa" },
+        { nombre: "Batarang", daño: 15, tipo: "Distancia", animacion: "images/DC/batman/batarang" },
+        { nombre: "Puñetazo", daño: 20, tipo: "Físico", animacion: "puñetazo-batman.gif" },
+        { nombre: "Bomba de humo", daño: 10, tipo: "Área", animacion: "bomba-humo.gif" },
+        { nombre: "Ataque sorpresa", daño: 25, tipo: "Crítico", animacion: "ataque-sorpresa.gif" },
       ],
     },
     {
@@ -60,7 +60,7 @@ function cargarDatos() {
       nombreClave: "Clark Kent",
       descripcion:
         "El Hombre de Acero, un alienígena de Krypton con poderes sobrehumanos que protege la Tierra como su mayor héroe.",
-      imagen: "images/superman.jpg",
+      imagen: "images/DC/superman/superman.jpg",
       fuerza: 10,
       ataque: 9,
       debilidad: "Kryptonita",
@@ -83,7 +83,7 @@ function cargarDatos() {
       nombreClave: "Diana Prince",
       descripcion:
         "Princesa Amazona y guerrera, bendecida por los dioses con habilidades sobrehumanas y destreza en combate.",
-      imagen: "images/wonder_woman.jpg",
+      imagen: "images/DC/mujer-maravilla/wonder_woman.jpg",
       fuerza: 9,
       ataque: 8,
       debilidad: "Ataduras",
@@ -106,7 +106,7 @@ function cargarDatos() {
       nombreClave: "Barry Allen",
       descripcion:
         "El hombre más rápido del mundo, capaz de moverse a velocidades sobrehumanas y manipular la Speed Force.",
-      imagen: "images/flash.jpg",
+      imagen: "images/DC/flash/flash.jpg",
       fuerza: 6,
       ataque: 7,
       debilidad: "Frío",
@@ -128,7 +128,7 @@ function cargarDatos() {
       nombre: "Aquaman",
       nombreClave: "Arthur Curry",
       descripcion: "Rey de la Atlántida, con fuerza sobrehumana y la capacidad de comunicarse con la vida marina.",
-      imagen: "images/aquaman.jpg",
+      imagen: "images/DC/aquaman/aquaman.jpg",
       fuerza: 8,
       ataque: 7,
       debilidad: "Deshidratación",
@@ -151,7 +151,7 @@ function cargarDatos() {
       nombreClave: "Hal Jordan",
       descripcion:
         "Miembro del Cuerpo de Linternas Verdes, utiliza un anillo de poder alimentado por la fuerza de voluntad.",
-      imagen: "images/linterna_verde2.jpg",
+      imagen: "images/DC/linterna-verde/linterna_verde2.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Miedo",
@@ -177,7 +177,7 @@ function cargarDatos() {
       nombreClave: "Tony Stark",
       descripcion:
         "Genio inventor y multimillonario que creó una armadura de alta tecnología para salvar su vida y combatir el mal.",
-      imagen: "images/ironman.jpg",
+      imagen: "images/MARVEL/iron-man/ironman.jpg",
       fuerza: 8,
       ataque: 9,
       debilidad: "Energía",
@@ -188,10 +188,10 @@ function cargarDatos() {
       historia:
         "Tony Stark, un genio inventor y CEO de Stark Industries, fue secuestrado y obligado a construir un arma. En su lugar, creó una armadura para escapar y se convirtió en Iron Man para proteger al mundo.",
       ataques: [
-        { nombre: "Repulsor", daño: 20, tipo: "Energía", animacion: "repulsor" },
-        { nombre: "Misiles", daño: 25, tipo: "Explosivo", animacion: "misiles" },
-        { nombre: "Láser", daño: 15, tipo: "Precisión", animacion: "laser" },
-        { nombre: "Unibeam", daño: 35, tipo: "Crítico", animacion: "unibeam" },
+        { nombre: "Repulsor", daño: 20, tipo: "Energía", animacion: "repulsor.gif" },
+        { nombre: "Misiles", daño: 25, tipo: "Explosivo", animacion: "misil.gif" },
+        { nombre: "Láser", daño: 15, tipo: "Precisión", animacion: "laser.gif" },
+        { nombre: "Unibeam", daño: 35, tipo: "Crítico", animacion: "unibeam.gif" },
       ],
     },
     {
@@ -199,7 +199,7 @@ function cargarDatos() {
       nombre: "Thor",
       nombreClave: "Thor Odinson",
       descripcion: "Dios del Trueno asgardiano que empuña el martillo encantado Mjolnir y controla el poder del rayo.",
-      imagen: "images/thor.jpg",
+      imagen: "images/MARVEL/thor/thor.jpg",
       fuerza: 10,
       ataque: 9,
       debilidad: "Magia",
@@ -222,7 +222,7 @@ function cargarDatos() {
       nombreClave: "Peter Parker",
       descripcion:
         "Joven héroe con habilidades arácnidas que equilibra su vida de superhéroe con sus responsabilidades personales.",
-      imagen: "images/spiderman.jpg",
+      imagen: "images/MARVEL/spiderman/spiderman.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Responsabilidad",
@@ -244,7 +244,7 @@ function cargarDatos() {
       nombre: "Hulk",
       nombreClave: "Bruce Banner",
       descripcion: "El gigante esmeralda, una entidad de fuerza ilimitada que surge cuando Bruce Banner se enfurece.",
-      imagen: "images/hulk.jpg",
+      imagen: "images/MARVEL/hulk/hulk.jpg",
       fuerza: 10,
       ataque: 10,
       debilidad: "Control mental",
@@ -267,7 +267,7 @@ function cargarDatos() {
       nombreClave: "Steve Rogers",
       descripcion:
         "El primer vengador, un super soldado con fuerza, agilidad y resistencia mejoradas que porta un escudo de vibranium.",
-      imagen: "images/capitan_america.jpg",
+      imagen: "images/MARVEL/capitan-america/capitan_america.jpg",
       fuerza: 7,
       ataque: 8,
       debilidad: "Lealtad",
@@ -289,7 +289,7 @@ function cargarDatos() {
       nombre: "Black Widow",
       nombreClave: "Natasha Romanoff",
       descripcion: "Espía maestra y asesina entrenada, experta en combate y espionaje.",
-      imagen: "images/viuda_negra.jpg",
+      imagen: "images/MARVEL/viuda-negra/viuda_negra.jpg",
       fuerza: 6,
       ataque: 8,
       debilidad: "Pasado",
@@ -937,8 +937,22 @@ function mostrarAnimacionAtaque(nombreAtaque, animacion, esCritico) {
   // Añadir clase para animación
   divAnimacion.className = "animacion-ataque activa"
 
-  // Añadir clase específica para la animación del ataque
+  // Limpiar contenido anterior
+  divAnimacion.innerHTML = ""
+
+  // Añadir GIF según el tipo de animación
   if (animacion) {
+    // Determinar la ruta base para las imágenes
+    const rutaBase = window.location.pathname.includes("/html/") ? "../" : ""
+    const gifPath = `${rutaBase}images/animations/${animacion}.gif`
+    
+    // Crear y añadir el elemento de imagen
+    const gifElement = document.createElement("img")
+    gifElement.src = gifPath
+    gifElement.alt = nombreAtaque
+    gifElement.className = "ataque-gif"
+    divAnimacion.appendChild(gifElement)
+    
     divAnimacion.classList.add(`animacion-${animacion}`)
   }
 
@@ -946,11 +960,12 @@ function mostrarAnimacionAtaque(nombreAtaque, animacion, esCritico) {
     divAnimacion.classList.add("critico")
   }
 
-  // Quitar clases después de la animación
+  // Quitar clases y limpiar contenido después de la animación
   setTimeout(() => {
     divAnimacion.className = "animacion-ataque"
+    divAnimacion.innerHTML = ""
     divMensaje.style.display = "none"
-  }, 1000)
+  }, 1500)
 }
 
 // Función para ataque de la IA

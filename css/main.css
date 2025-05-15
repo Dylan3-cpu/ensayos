@@ -165,6 +165,34 @@ footer {
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilos para la animación de ataque */
+#animacion-ataque {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animacion-ataque.activa {
+    display: flex;
+}
+
+.ataque-gif {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Estilo para ataques críticos */
+.critico .ataque-gif {
+    filter: brightness(1.5) saturate(1.5);
+    transform: scale(1.2);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .arena-combate {
