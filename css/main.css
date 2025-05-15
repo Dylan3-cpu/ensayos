@@ -6,7 +6,15 @@
   box-sizing: border-box;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
-
+#video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
 body {
   background-color: #1a1a2e;
   color: #e6e6e6;
